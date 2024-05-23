@@ -63,7 +63,7 @@ def download_video():
     with yt.YoutubeDL(yt_opts) as ydl:
         ydl.download([request.args['link']])
     
-    return f'http://localhost:5000/get_video?filename={urllib.parse.quote_plus(downloaded_filename)}'
+    return f'https://api-video-downloader.onrender.com/get_video?filename={urllib.parse.quote_plus(downloaded_filename)}'
 
 @app.get('/get_video')
 def get_video():
