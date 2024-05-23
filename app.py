@@ -98,8 +98,8 @@ def get_video():
     
 
 
-# app.run(debug=False, threaded=True)
+app.run(debug=False, threaded=True)
 
 # Production
-http_server = WSGIServer(('', 5000), app)
-http_server.serve_forever()
+# http_server = WSGIServer(('', 5000), app)
+# http_server.serve_forever()
